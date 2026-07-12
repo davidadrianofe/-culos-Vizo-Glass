@@ -1,0 +1,15 @@
+# Commit: Scaffold full local LLM MVP
+
+This commit adds the initial scaffold for a fully local LLM-based smart glasses project (Vizo Glass).
+
+Contents:
+- backend/ with FastAPI app, model manager, Dockerfile and README
+- client/ reference scripts for text and audio capture
+- docker-compose.yml and .env.example
+- LICENSE (MIT)
+
+Notes:
+- Model weights are not included. Place a GGML model at backend/models/ggml-model.bin
+- STT and TTS endpoints are placeholders and should be implemented with faster-whisper/whisper.cpp and Coqui TTS or another offline TTS engine.
+
+CEO e criador: David Adriano Ferrari dos Santos

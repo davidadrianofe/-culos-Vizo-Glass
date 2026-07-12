@@ -1,0 +1,16 @@
+# Docker Compose for local development (backend + optional services)
+
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: vizoglass-backend:local
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend/models:/app/backend/models
+      - ./backend:/app/backend
+    environment:
+      - LLM_MODEL_PATH=/app/backend/models/ggml-model.bin
